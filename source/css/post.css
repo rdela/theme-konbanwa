@@ -1,6 +1,10 @@
 p.h-entry,
-.post {
+.post,
+.posts {
   width: 100%;
+}
+p.h-entry,
+.post {
   max-width: 760px;
   text-align: left;
   margin: 0 auto 20px;
