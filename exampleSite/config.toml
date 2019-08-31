@@ -1,6 +1,6 @@
 baseurl = "/"
 languageCode = "en-us"
-theme = "theme-konbanwa"
+theme = "konbanwa"
 paginate = 12
 
 [params]
