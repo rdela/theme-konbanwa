@@ -1,0 +1,65 @@
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="{{ if .IsHome }}{{ $.Site.Params.Subtitle }}{{ else }}{{ .Summary | plainify }}{{ end }}"/>
+<meta name="keywords" content="{{ $.Site.Params.keywords }}"/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="{{ .Permalink }}" />
+
+<!-- Theme CSS -->
+<link rel="stylesheet" href="{{ "assets/style.css" | absURL }}">
+
+<!-- Custom CSS to override theme properties (/static/style.css) -->
+<link rel="stylesheet" href="{{ "style.css" | absURL }}">
+<link rel="stylesheet" type="text/css" href="{{ "custom.css" | relURL }}" />
+
+<!-- Icons -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ "img/apple-touch-icon-144-precomposed.png" | absURL }}">
+<link rel="shortcut icon" href="{{ "img/favicon.png" | absURL }}">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="{{ if .IsHome }}{{ $.Site.Title }} — {{ $.Site.Params.Subtitle }}{{ else }}{{ .Title }} :: {{ $.Site.Title }} — {{ $.Site.Params.Subtitle }}{{ end }}" />
+<meta name="twitter:description" content="{{ if .IsHome }}{{ $.Site.Params.tagline }}{{ else }}{{ .Summary | plainify }}{{ end }}" />
+<meta name="twitter:site" content="{{ $.Site.BaseURL }}" />
+<meta name="twitter:creator" content="{{ .Params.Author }}" />
+<meta name="twitter:image" content="{{ with .Params.Cover }}{{ . | absURL }}{{ end }}">
+
+<!-- OG data -->
+<meta property="og:locale" content="{{ $.Site.Language.Lang }}" />
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
+<meta property="og:title" content="{{ if .IsHome }}{{ $.Site.Title }} — {{ $.Site.Params.Subtitle }}{{ else }}{{ .Title }} :: {{ $.Site.Title }} — {{ $.Site.Params.Subtitle }}{{ end }}">
+<meta property="og:description" content="{{ if .IsHome }}{{ $.Site.Params.tagline }}{{ else }}{{ .Summary | plainify }}{{ end }}" />
+<meta property="og:url" content="{{ .Permalink }}" />
+<meta property="og:site_name" content="{{ .Title }}" />
+<meta property="og:image" content="{{ with .Params.Cover }}{{ . | absURL }}{{ end }}">
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+{{ range .Params.categories }}<meta property="article:section" content="{{ . }}" />{{ end }}
+{{ if isset .Params "date" }}<meta property="article:published_time" content="{{ time .Date }}" />{{ end }}
+
+{{ if .RSSLink -}}
+  <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+  <link href="{{ "podcast.xml" | absURL }}" rel="alternate" type="application/rss+xml" title="Podcast" />
+  <link rel="alternate" type="application/json" title="{{ .Site.Title }}" href="{{ "feed.json" | absURL }}" />
+  <link rel="EditURI" type="application/rsd+xml" href="{{ "rsd.xml" | absURL }}" />
+{{ end -}}
+
+<link rel="me" href="https://micro.blog/{{ .Site.Author.username }}" />
+{{ with .Site.Params.twitter_username }}
+	<link rel="me" href="https://twitter.com/{{ . }}" />
+{{ end }}
+{{ with .Site.Params.github_username }}
+	<link rel="me" href="https://github.com/{{ . }}" />
+{{ end }}
+{{ with .Site.Params.instagram_username }}
+	<link rel="me" href="https://instagram.com/{{ . }}" />
+{{ end }}
+<link rel="authorization_endpoint" href="https://micro.blog/indieauth/auth" />
+<link rel="token_endpoint" href="https://micro.blog/indieauth/token" />
+<link rel="micropub" href="https://micro.blog/micropub" />
+<link rel="microsub" href="https://micro.blog/microsub" />
+<link rel="webmention" href="https://micro.blog/webmention" />
+<link rel="subscribe" href="https://micro.blog/users/follow" />
+
+<!-- head custom -->
+{{- partial "extended_head.html" . }}
