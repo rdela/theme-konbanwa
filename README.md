@@ -2,9 +2,9 @@
 
 ![Konbanwa](https://github.com/rdela/theme-konbanwa/blob/master/images/screenshot.png?raw=true)
 
-Konbanwa started as a fork of the [Micro.blog version](https://github.com/microdotblog/theme-hello) of the [Hello Friend](https://github.com/panr/hugo-theme-hello-friend/) theme.
+Konbanwa started as a fork of the [Micro.blog version](https://github.com/microdotblog/theme-hello) of the [Hello Friend](https://github.com/rdela/theme-konbanwa/) theme.
 
-### DEMO - https://hugo-hello-friend.now.sh/
+### DEMO - coming soon
 
 ---
 
@@ -18,8 +18,8 @@ Konbanwa started as a fork of the [Micro.blog version](https://github.com/microd
 - [How to run your site](#how-to-run-your-site)
 - [How to edit the theme](#how-to-edit-the-theme)
 - [How to contribute](#how-to-contribute)
-- [Hello Friend theme user?](#hello-friend-theme-user)
-- [Licence](#licence)
+- [Konbanwa theme user?](#konbanwa-theme-user)
+- [License](#license)
 
 ## Features
 
@@ -31,9 +31,9 @@ Konbanwa started as a fork of the [Micro.blog version](https://github.com/microd
 #### Built-in shortcodes
 
 - **`image`** (prop required: **`src`**; props optional: **`alt`**, **`position`** (**left** is default | center | right), **`style`**)
-  - eg: `{{< image src="/img/hello.png" alt="Hello Friend" position="center" style="border-radius: 8px;" >}}`
+  - eg: `{{< image src="/img/hello.jpg" alt="Konbanwa" position="center" style="border-radius: 8px;" >}}`
 - **`figure`** (same as `image`, plus few optional props: **`caption`**, **`captionPosition`** (left | **center** is default | right), **`captionStyle`**
-  - eg: `{{< figure src="/img/hello.png" alt="Hello Friend" position="center" style="border-radius: 8px;" caption="Hello Friend!" captionPosition="right" captionStyle="color: red;" >}}`
+  - eg: `{{< figure src="/img/hello.jpg" alt="Konbanwa" position="center" style="border-radius: 8px;" caption="Konbanwa!" captionPosition="right" captionStyle="color: red;" >}}`
 
 #### Code highlighting
 
@@ -49,18 +49,18 @@ By default the theme is using PrismJS to color your code syntax. All you need to
 
 ## How to start
 
-You can download the theme manually by going to [https://github.com/panr/hugo-theme-hello-friend.git](https://github.com/panr/hugo-theme-hello-friend.git) and pasting it to `themes/hello-friend` in your root directory.
+You can download the theme manually by going to <https://github.com/rdela/theme-konbanwa.git> and pasting it to `themes/konbanwa` in your root directory.
 
 You can also clone it directly to your Hugo folder:
 
 ```
-$ git clone https://github.com/panr/hugo-theme-hello-friend.git themes/hello-friend
+$ git clone https://github.com/rdela/theme-konbanwa.git themes/konbanwa
 ```
 
 If you don't want to make any radical changes, it's the best option, because you can get new updates when they are available. To do so, include it as a git submodule:
 
 ```
-$ git submodule add https://github.com/panr/hugo-theme-hello-friend.git themes/hello-friend
+$ git submodule add https://github.com/rdela/theme-konbanwa.git themes/konbanwa
 ```
 
 ## How to configure
@@ -70,8 +70,8 @@ The theme doesn't require any advanced configuration. Just copy:
 ```
 baseurl = "/"
 languageCode = "en-us"
-theme = "hello-friend"
-paginate = 5
+theme = "konbanwa"
+paginate = 12
 
 [params]
   # dir name of your blog content (default is `content/posts`)
@@ -85,8 +85,8 @@ paginate = 5
 
 [languages]
   [languages.en]
-    title = "Hello Friend"
-    subtitle = "A simple theme for Hugo"
+    title = "Konbanwa"
+    subtitle = "A mellow theme for Micro.blog"
     keywords = ""
     copyright = ""
     menuMore = "Show more"
@@ -100,7 +100,7 @@ paginate = 5
     dateFormatList = "2006-01-02"
 
     [languages.en.params.logo]
-      logoText = "hello friend"
+      logoText = "konbanwa"
       logoHomeLink = "/"
     # or
     #
@@ -133,17 +133,17 @@ Adding a cover image to your post is simple and there are two options when you e
 
 ## Add-ons
 
-- **Archive** — Theme has built-in `archive` page for main content (see `contentTypeName` variable in config). If you need archive on your blog just copy https://github.com/panr/hugo-theme-hello-friend/blob/master/exampleSite/content/archive.md to your `content` dir. If you need multilangual archives, duplicate `content/archive.md` and add `.Lang` variable, eg: `content/archive.pl.md` (remember to change `url` in duplicated file).
+- **Archive** — Theme has built-in `archive` page for main content (see `contentTypeName` variable in config). If you need archive on your blog just copy https://github.com/rdela/theme-konbanwa/blob/master/exampleSite/content/archive.md to your `content` dir. If you need multilangual archives, duplicate `content/archive.md` and add `.Lang` variable, eg: `content/archive.pl.md` (remember to change `url` in duplicated file).
 - **Comments** — for adding comments to your blog posts please take a look at `layouts/partials/comments.html` https://github.com/panr/hugo-theme-terminal/blob/master/layouts/partials/comments.html.
-- **Extended `<head>`** — if you need to add something inside `<head>` element, please take a look at `layouts/partial/extended_head.html` https://github.com/panr/hugo-theme-hello-friend/blob/master/layouts/partials/extended_head.html
-- **Extended `<footer>`** — if you need to add something before end of `<body>` element, please take a look at `layouts/partial/extended_footer.html` https://github.com/panr/hugo-theme-hello-friend/blob/master/layouts/partials/extended_footer.html
+- **Extended `<head>`** — if you need to add something inside `<head>` element, please take a look at `layouts/partial/extended_head.html` https://github.com/rdela/theme-konbanwa/blob/master/layouts/partials/extended_head.html
+- **Extended `<footer>`** — if you need to add something before end of `<body>` element, please take a look at `layouts/partial/extended_footer.html` https://github.com/rdela/theme-konbanwa/blob/master/layouts/partials/extended_footer.html
 
 ## How to run your site
 
 From your Hugo root directory run:
 
 ```
-$ hugo server -t hello-friend
+$ hugo server -t konbanwa
 ```
 
 and go to `localhost:1313` in your browser. From now on all the changes you make will go live, so you don't need to refresh your browser every single time.
@@ -155,7 +155,7 @@ If you have to override some of the styles, you can do this easily by adding `st
 Otherwise, if you really want to edit the theme, you need to install Node dependencies. To do so, go to the theme directory (from your Hugo root directory):
 
 ```
-$ cd themes/hello-friend
+$ cd themes/konbanwa
 ```
 
 and then run:
@@ -168,14 +168,14 @@ $ yarn
 
 ## How to contribute
 
-If you spot any bugs, please use [Issue Tracker](https://github.com/panr/hugo-theme-hello-friend/issues) or if you want to add a new feature directly please create a new [Pull Request](https://github.com/panr/hugo-theme-hello-friend/pulls).
+If you spot any bugs, please use [Issue Tracker](https://github.com/rdela/theme-konbanwa/issues) or if you want to add a new feature directly please create a new [Pull Request](https://github.com/rdela/theme-konbanwa/pulls).
 
-## `Hello Friend` theme user?
+## `Konbanwa` theme user?
 
-I'd be happy to know more about you and what you are doing. If you want to share it, please make a contribution and [add your site to the list](https://github.com/panr/hugo-theme-hello-friend/blob/master/USERS.md)! 🤗
+I'd be happy to know more about you and what you are doing. If you want to share it, please make a contribution and [add your site to the list](https://github.com/rdela/theme-konbanwa/blob/master/USERS.md)! 🤗
 
-## Licence
+## License
 
-Copyright © 2019 Radosław Kozieł ([@panr](https://twitter.com/panr))
+Copyright © 2019 Ricky de Laveaga ([@rickydelaveaga](https://twitter.com/rickydelaveaga))
 
-The theme is released under the MIT License. Check the [original theme license](https://github.com/panr/hugo-theme-hello-friend/blob/master/LICENSE.md) for additional licensing information.
+The theme is released under the MIT License. Check the [original theme license](https://github.com/rdela/theme-konbanwa/blob/master/LICENSE.md) for additional licensing information.

@@ -6,8 +6,9 @@ author = "Ricky"
 
 # Hi there
 
-Thanks to [Radek](https://radoslawkoziel.pl), author of the Hello Friend theme
- from which Konbanwa derives.
+Thanks to [Radek](https://radoslawkoziel.pl), author of the
+[Hello Friend](https://github.com/panr/hugo-theme-hello-friend) theme
+ from which [Konbanwa](https://github.com/rdela/theme-konbanwa) derives.
 
 The theme includes:
 

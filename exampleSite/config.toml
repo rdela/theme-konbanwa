@@ -16,7 +16,7 @@ paginate = 12
 [languages]
   [languages.en]
     title = "Konbanwa"
-    subtitle = "A simple theme for Micro.blog"
+    subtitle = "A mellow theme for Micro.blog"
     keywords = ""
     copyright = ""
     menuMore = "Show more"
