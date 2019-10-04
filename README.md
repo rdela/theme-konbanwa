@@ -4,7 +4,9 @@
 
 Konbanwa started as a fork of the [Micro.blog version](https://github.com/microdotblog/theme-hello) of the [Hello Friend](https://github.com/panr/hugo-theme-hello-friend) theme by [@panr](https://github.com/panr).
 
-### DEMO - <https://theme-konbanwa.netlify.com>
+This is the dark by default, [Micro.blog](https://micro.blog/) version.
+
+### DEMO - <https://theme-konbanwa.netlify.com> ([source](https://github.com/rdela/theme-konbanwa-demo))
 
 ---
 
